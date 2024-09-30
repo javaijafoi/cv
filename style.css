@@ -74,3 +74,36 @@ ul {
 ul li {
     margin-bottom: 10px;
 }
+
+/* Estilos específicos para impressão */
+@media print {
+    body {
+        background-color: white; /* Remover o fundo */
+        color: black; /* Garantir que o texto fique bem legível */
+    }
+
+    .container {
+        width: 100%; /* Usar o espaço total da página impressa */
+        margin: 0;
+        padding: 0;
+        border: none; /* Remover bordas */
+        box-shadow: none; /* Remover sombras */
+    }
+
+    a {
+        color: black; /* Tornar os links legíveis em preto */
+        text-decoration: none; /* Remover sublinhado para versão impressa */
+    }
+
+    header {
+        text-align: left; /* Alinhar o cabeçalho à esquerda para impressão */
+    }
+
+    .section {
+        page-break-inside: avoid; /* Evitar quebra de página dentro das seções */
+    }
+
+    h1, h2, h3 {
+        break-inside: avoid; /* Evitar que os títulos fiquem divididos entre páginas */
+    }
+}
