@@ -109,7 +109,7 @@ ul li {
     h1, h2, h3 {
         break-inside: avoid; /* Evitar que os títulos fiquem divididos entre páginas */
     }
-    language-switch {
+    #language-switch {
         display: none;
     }
 }
