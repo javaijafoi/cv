@@ -5,21 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo de Peter Mac Hamilton</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function switchLanguage(lang) {
+            const sections = document.querySelectorAll('.lang');
+            sections.forEach(section => {
+                section.style.display = section.classList.contains(lang) ? 'block' : 'none';
+            });
+        }
+        window.onload = function() {
+            switchLanguage('pt'); // Carregar versão em português como padrão
+        }
+    </script>
 </head>
 <body>
     <div class="container">
+        <!-- Switch de Idioma -->
         <header>
+            <div id="language-switch">
+                <button onclick="switchLanguage('pt')">Português</button>
+                <button onclick="switchLanguage('en')">English</button>
+                <button onclick="switchLanguage('es')">Español</button>
+            </div>
             <h1>Peter Mac Hamilton</h1>
             <p><strong>Product Manager | Estratégia e Inovação em Produtos Digitais</strong></p>
             <p>São Paulo, SP | 11969534105 | <a href="mailto:novoemaildopeter@gmail.com">novoemaildopeter@gmail.com</a> | <a href="https://www.linkedin.com/in/peter-mac-hamilton" target="_blank">LinkedIn</a></p>
         </header>
 
-        <section class="section">
+        <!-- Seção em Português -->
+        <section class="section lang pt">
             <h2>Objetivo Profissional</h2>
             <p>Profissional experiente em gestão de produtos digitais, com sólida atuação na implementação de metodologias ágeis, desenvolvimento de soluções tecnológicas e otimização de processos. Capaz de transformar dados em insights estratégicos e liderar equipes multidisciplinares para a entrega de resultados excepcionais. Busco oportunidades para contribuir com inovação e agilidade, impulsionando o sucesso organizacional.</p>
         </section>
 
-        <section class="section">
+        <!-- Seção em Inglês -->
+        <section class="section lang en" style="display:none;">
+            <h2>Professional Objective</h2>
+            <p>Experienced professional in digital product management, with solid experience in implementing agile methodologies, developing technological solutions, and optimizing processes. Able to turn data into strategic insights and lead multidisciplinary teams to deliver exceptional results. Seeking opportunities to contribute with innovation and agility, driving organizational success.</p>
+        </section>
+
+        <!-- Seção em Espanhol -->
+        <section class="section lang es" style="display:none;">
+            <h2>Objetivo Profesional</h2>
+            <p>Profesional experimentado en gestión de productos digitales, con sólida experiencia en la implementación de metodologías ágiles, desarrollo de soluciones tecnológicas y optimización de procesos. Capaz de transformar datos en conocimientos estratégicos y liderar equipos multidisciplinarios para la entrega de resultados excepcionales. Busco oportunidades para contribuir con innovación y agilidad, impulsando el éxito organizacional.</p>
+        </section>
+
+        <!-- Experiência Profissional -->
+        <section class="section lang pt">
             <h2>Experiência Profissional</h2>
 
             <div class="job">
@@ -32,30 +63,42 @@
                     <li>Redesenho de processos internos e padronização de produtos, reduzindo o TFV (Time to First Value) em 70%.</li>
                 </ul>
             </div>
+        </section>
+
+        <!-- Experiência Profissional Inglês -->
+        <section class="section lang en" style="display:none;">
+            <h2>Professional Experience</h2>
 
             <div class="job">
-                <h3>Product Manager - Se Liga</h3>
-                <p><em>Julho de 2017 – Maio de 2022 | São Paulo, SP</em></p>
+                <h3>Product Manager - Gedanken</h3>
+                <p><em>May 2022 – Present | São Paulo, SP</em></p>
                 <ul>
-                    <li>Transformação de um canal do YouTube em uma EdTech com mais de 10 mil alunos.</li>
-                    <li>Conversão do modelo de conteúdo gratuito para cursos pagos e crescimento significativo da receita.</li>
-                    <li>Implementação de um modelo de assinatura que resultou em um negócio sustentável e lucrativo.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>Product Owner - Editora Lorca</h3>
-                <p><em>Fevereiro de 2015 – Junho de 2017 | São Paulo, SP</em></p>
-                <ul>
-                    <li>Criação de interface global de vendas que aumentou as vendas online em 120%.</li>
-                    <li>Implementação de modelo de vendas digitais, resultando em 12% de aumento no faturamento.</li>
-                    <li>Gerenciamento de equipes em espanhol e inglês situadas na América Latina, Europa e Oriente Médio</li>
-
+                    <li>Implementation of agile methodologies (SCRUM and KANBAN) to optimize internal processes, resulting in greater efficiency.</li>
+                    <li>Coordination of internal innovations, increasing NPS and reducing Churn.</li>
+                    <li>Development and management of a knowledge base that reduced support tickets by 50%.</li>
+                    <li>Redesign of internal processes and standardization of products, reducing TFV (Time to First Value) by 70%.</li>
                 </ul>
             </div>
         </section>
 
-        <section class="section">
+        <!-- Experiência Profissional Espanhol -->
+        <section class="section lang es" style="display:none;">
+            <h2>Experiencia Profesional</h2>
+
+            <div class="job">
+                <h3>Product Manager - Gedanken</h3>
+                <p><em>Mayo de 2022 – Presente | São Paulo, SP</em></p>
+                <ul>
+                    <li>Implementación de metodologías ágiles (SCRUM y KANBAN) para optimizar procesos internos, resultando en mayor eficiencia.</li>
+                    <li>Coordinación de innovaciones internas, aumentando el NPS y reduciendo el Churn.</li>
+                    <li>Desarrollo y gestión de una base de conocimientos que redujo en un 50% los tickets escalados al soporte.</li>
+                    <li>Rediseño de procesos internos y estandarización de productos, reduciendo el TFV (Time to First Value) en un 70%.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Formação Acadêmica -->
+        <section class="section lang pt">
             <h2>Formação Acadêmica</h2>
             <ul>
                 <li><strong>Pós-Graduação em Liderança e Gestão de Pessoas</strong>, Descomplica (Dezembro de 2023)</li>
@@ -68,33 +111,70 @@
             </ul>
         </section>
 
-        <section class="section">
-            <h2>Certificações</h2>
+        <!-- Formação Acadêmica Inglês -->
+        <section class="section lang en" style="display:none;">
+            <h2>Academic Background</h2>
             <ul>
-                <li>Certified Scrum Product Owner (CSPO) (Setembro de 2024)</li>
-                <li>Digital Product Leadership (Junho de 2024)</li>
-                <li>Discovery de Produto (Julho de 2024)</li>
-                <li>Inteligência Artificial em Negócios Digitais (Maio de 2024)</li>
+                <li><strong>Postgraduate in Leadership and People Management</strong>, Descomplica (December 2023)</li>
+                <li><strong>Postgraduate in Product Management</strong>, Descomplica (December 2022)</li>
+                <li><strong>MBA in Strategic Project Management and Agile Methodologies</strong>, Descomplica (July 2022)</li>
+                <li><strong>Degree in English Language and Literature</strong>, Unicsul (December 2020)</li>
+                <li><strong>Degree in Spanish Language and Literature</strong>, USP (December 2016)</li>
+                <li><strong>Degree in Advertising and Marketing</strong>, Belas Artes (December 2009)</li>
+                <li><strong>Technical High School in Information Technology</strong>, ETEC Camargo Aranha (December 2004)</li>
             </ul>
         </section>
 
-        <section class="section">
-    <h2>Competências Técnicas</h2>
-    <ul>
-        <li><strong>Metodologias Ágeis:</strong> SCRUM, Kanban, liderança de squads e otimização de entregas ágeis.</li>
-        <li><strong>Gestão de Produtos:</strong> Ciclo de vida completo, definição de roadmaps, priorização de backlog, alinhamento com stakeholders.</li>
-        <li><strong>Ferramentas:</strong> Jira, SQL, Figma, Adobe XD para gestão ágil, análise de dados e prototipação.</li>
-        <li><strong>Análise de Dados:</strong> Data Analytics, Business Intelligence, uso de métricas para decisões estratégicas (NPS, LTV, churn).</li>
-        <li><strong>Liderança e Comunicação:</strong> Gestão de equipes cross-funcionais, comunicação eficiente com executivos e stakeholders.</li>
-    </ul>
-</section>
-
-
-        <section class="section">
-            <h2>Idiomas</h2>
-            <p><strong>Inglês:</strong> Avançado</p>
-            <p><strong>Espanhol:</strong> Avançado</p>
+        <!-- Formação Acadêmica Espanhol -->
+        <section class="section lang es" style="display:none;">
+            <h2>Formación Académica</h2>
+            <ul>
+                <li><strong>Posgrado en Liderazgo y Gestión de Personas</strong>, Descomplica (Diciembre de 2023)</li>
+                <li><strong>Posgrado en Gestión de Productos</strong>, Descomplica (Diciembre de 2022)</li>
+                <li><strong>MBA en Gestión Estratégica de Proyectos y Metodologías Ágiles</strong>, Descomplica (Julio de 2022)</li>
+                <li><strong>Licenciatura en Lengua Inglesa y Literaturas</strong>, Unicsul (Diciembre de 2020)</li>
+                <li><strong>Licenciatura en Lengua Española y Literaturas</strong>, USP (Diciembre de 2016)</li>
+                <li><strong>Licenciatura en Publicidad y Propaganda</strong>, Belas Artes (Diciembre de 2009)</li>
+                <li><strong>Educación Media Técnica en Tecnología de la Información</strong>, ETEC Camargo Aranha (Diciembre de 2004)</li>
+            </ul>
         </section>
+
+        <!-- Competências Técnicas -->
+        <section class="section lang pt">
+            <h2>Competências Técnicas</h2>
+            <ul>
+                <li><strong>Metodologias Ágeis:</strong> SCRUM, Kanban, liderança de squads e otimização de entregas ágeis.</li>
+                <li><strong>Gestão de Produtos:</strong> Ciclo de vida completo, definição de roadmaps, priorização de backlog, alinhamento com stakeholders.</li>
+                <li><strong>Ferramentas:</strong> Jira, SQL, Figma, Adobe XD para gestão ágil, análise de dados e prototipação.</li>
+                <li><strong>Análise de Dados:</strong> Data Analytics, Business Intelligence, uso de métricas para decisões estratégicas (NPS, LTV, churn).</li>
+                <li><strong>Liderança e Comunicação:</strong> Gestão de equipes cross-funcionais, comunicação eficiente com executivos e stakeholders.</li>
+            </ul>
+        </section>
+
+        <!-- Competências Técnicas Inglês -->
+        <section class="section lang en" style="display:none;">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Agile Methodologies:</strong> SCRUM, Kanban, leadership of squads, and optimization of agile deliveries.</li>
+                <li><strong>Product Management:</strong> Full life cycle, roadmap definition, backlog prioritization, stakeholder alignment.</li>
+                <li><strong>Tools:</strong> Jira, SQL, Figma, Adobe XD for agile management, data analysis, and prototyping.</li>
+                <li><strong>Data Analysis:</strong> Data Analytics, Business Intelligence, use of metrics for strategic decisions (NPS, LTV, churn).</li>
+                <li><strong>Leadership and Communication:</strong> Management of cross-functional teams, effective communication with executives and stakeholders.</li>
+            </ul>
+        </section>
+
+        <!-- Competências Técnicas Espanhol -->
+        <section class="section lang es" style="display:none;">
+            <h2>Competencias Técnicas</h2>
+            <ul>
+                <li><strong>Metodologías Ágiles:</strong> SCRUM, Kanban, liderazgo de squads y optimización de entregas ágiles.</li>
+                <li><strong>Gestión de Productos:</strong> Ciclo de vida completo, definición de roadmaps, priorización de backlog, alineación con stakeholders.</li>
+                <li><strong>Herramientas:</strong> Jira, SQL, Figma, Adobe XD para gestión ágil, análisis de datos y prototipado.</li>
+                <li><strong>Análisis de Datos:</strong> Data Analytics, Business Intelligence, uso de métricas para decisiones estratégicas (NPS, LTV, churn).</li>
+                <li><strong>Liderazgo y Comunicación:</strong> Gestión de equipos cross-funcionales, comunicación eficiente con ejecutivos y stakeholders.</li>
+            </ul>
+        </section>
+
     </div>
 </body>
 </html>
