@@ -6,41 +6,23 @@
   <title>Currículo de Peter Mac Hamilton</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Exemplo simples de estilo – personalize conforme sua necessidade */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f7f7f7;
-      color: #333;
+    /* Estilo específico para organizar certificados de cursos em 3 colunas com fonte menor */
+    .cv-page .three-columns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      font-size: 0.85em;
     }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      background-color: #fff;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    .cv-page .three-columns ul {
+      list-style-type: none;
+      padding-left: 0;
     }
-    header, section {
-      margin-bottom: 20px;
-    }
-    h1, h2, h3 {
-      color: #0056b3;
-    }
-    ul {
-      list-style: disc;
-      margin-left: 20px;
-    }
-    a {
-      color: #0056b3;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    .cv-page .three-columns li {
+      margin-bottom: 5px;
     }
   </style>
 </head>
-<body>
+<body class="cv-page">
   <div class="container">
     <!-- Dados Pessoais -->
     <header>
@@ -53,7 +35,7 @@
     <section>
       <h2>Objetivo Profissional</h2>
       <p>
-        Profissional experiente em gestão de produtos digitais, com forte atuação na implementação de metodologias ágeis, definição de roadmaps e estratégias baseadas em dados, além da condução de pesquisas e benchmarkings. Com histórico de transformar desafios em soluções inovadoras, atuo na liderança de times multidisciplinares, integrando UX, dados, tecnologia e negócios. Busco contribuir para a transformação digital e editorial, agregando valor a produtos que impactem positivamente a experiência dos usuários.
+        Profissional experiente em gestão de produtos digitais, com forte atuação na implementação de metodologias ágeis, definição de roadmaps e estratégias baseadas em dados, além da condução de pesquisas e benchmarkings. Com histórico de transformar desafios em soluções inovadoras, atuo na liderança de times multidisciplinares, integrando UX, dados, tecnologia e áreas de negócio. Busco contribuir para a transformação digital e editorial, agregando valor a produtos que impactem positivamente a experiência dos usuários.
       </p>
     </section>
     
@@ -140,23 +122,29 @@
       </ul>
       
       <h3>Certificados de Cursos</h3>
-      <ul>
-        <li><a href="https://credentials.somostera.com/1d013eb7247265683f356885fadc8396" target="_blank">Introdução a Product Discovery</a></li>
-        <li><a href="https://credentials.somostera.com/29acaf7980f01294edc0ef69e1a8398e" target="_blank">Plano estratégico para investimento em IA</a></li>
-        <li><a href="https://credentials.somostera.com/3e484c44a9bcba79960779480d7de4c2" target="_blank">Introdução ao Discovery Contínuo</a></li>
-        <li><a href="https://credentials.somostera.com/41674ca4aae5ea1e870e13f2e4b08da9" target="_blank">Ideação e Teste de Soluções</a></li>
-        <li><a href="https://credentials.somostera.com/4ccc88ad1ddee29ea084c064587a6abe" target="_blank">Liderança e Negociação</a></li>
-        <li><a href="https://credentials.somostera.com/61f9ecf27003646aa73f962d94fe8fd9" target="_blank">Implementação ágil de IA Generativa em produtos digitais</a></li>
-        <li><a href="https://credentials.somostera.com/69b67b6f0454995797df1e88ba500f7c" target="_blank">Pesquisa para PMs</a></li>
-        <li><a href="https://credentials.somostera.com/7aece7e4db69ddbe6de5d158b6b67f22" target="_blank">Fundamentos da IA Generativa</a></li>
-        <li><a href="https://credentials.somostera.com/a8580d374cf9328bbae83d57662eb75b" target="_blank">Métricas e tomada de decisão com dados</a></li>
-        <li><a href="https://credentials.somostera.com/afbbc26e0ed50da5b0f31c2d153543a8" target="_blank">Aplique os resultados do Discovery</a></li>
-        <li><a href="https://credentials.somostera.com/bb8de389cfd34396f006e14bfa79eb1a" target="_blank">Métricas para Produtos Digitais</a></li>
-        <li><a href="https://credentials.somostera.com/d3a0fd52efad3d87d638c21b52144f57" target="_blank">Planejamento de Product Discovery</a></li>
-        <li><a href="https://credentials.somostera.com/ddc6f994c2417e8105e00b34e91fe0a0" target="_blank">Fundamentos de Product Management</a></li>
-        <li><a href="https://credentials.somostera.com/e654c0274028ef280eb5a13c42bbcadc" target="_blank">Definição e Validação do problema</a></li>
-        <li><a href="https://credentials.somostera.com/e8d23951e4b861a81e73e850dc46cc3c" target="_blank">Product Delivery: Construa a solução</a></li>
-      </ul>
+      <div class="three-columns">
+        <ul>
+          <li><a href="https://credentials.somostera.com/1d013eb7247265683f356885fadc8396" target="_blank">Introdução a Product Discovery</a></li>
+          <li><a href="https://credentials.somostera.com/29acaf7980f01294edc0ef69e1a8398e" target="_blank">Plano estratégico para investimento em IA</a></li>
+          <li><a href="https://credentials.somostera.com/3e484c44a9bcba79960779480d7de4c2" target="_blank">Introdução ao Discovery Contínuo</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://credentials.somostera.com/41674ca4aae5ea1e870e13f2e4b08da9" target="_blank">Ideação e Teste de Soluções</a></li>
+          <li><a href="https://credentials.somostera.com/4ccc88ad1ddee29ea084c064587a6abe" target="_blank">Liderança e Negociação</a></li>
+          <li><a href="https://credentials.somostera.com/61f9ecf27003646aa73f962d94fe8fd9" target="_blank">Implementação ágil de IA Generativa</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://credentials.somostera.com/69b67b6f0454995797df1e88ba500f7c" target="_blank">Pesquisa para PMs</a></li>
+          <li><a href="https://credentials.somostera.com/7aece7e4db69ddbe6de5d158b6b67f22" target="_blank">Fundamentos da IA Generativa</a></li>
+          <li><a href="https://credentials.somostera.com/a8580d374cf9328bbae83d57662eb75b" target="_blank">Métricas e tomada de decisão com dados</a></li>
+          <li><a href="https://credentials.somostera.com/afbbc26e0ed50da5b0f31c2d153543a8" target="_blank">Aplique os resultados do Discovery</a></li>
+          <li><a href="https://credentials.somostera.com/bb8de389cfd34396f006e14bfa79eb1a" target="_blank">Métricas para Produtos Digitais</a></li>
+          <li><a href="https://credentials.somostera.com/d3a0fd52efad3d87d638c21b52144f57" target="_blank">Planejamento de Product Discovery</a></li>
+          <li><a href="https://credentials.somostera.com/ddc6f994c2417e8105e00b34e91fe0a0" target="_blank">Fundamentos de Product Management</a></li>
+          <li><a href="https://credentials.somostera.com/e654c0274028ef280eb5a13c42bbcadc" target="_blank">Definição e Validação do problema</a></li>
+          <li><a href="https://credentials.somostera.com/e8d23951e4b861a81e73e850dc46cc3c" target="_blank">Product Delivery: Construa a solução</a></li>
+        </ul>
+      </div>
     </section>
     
     <!-- Idiomas -->
@@ -167,3 +155,4 @@
     </section>
   </div>
 </body>
+</html>
