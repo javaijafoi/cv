@@ -1,0 +1,162 @@
+/* Variante 4: Criativa */
+/* ========= base & tokens ========= */
+:root {
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --bg: #f7f7f8;
+  --card: #ffffff;
+  --text: #0f172a;      /* slate-900 */
+  --muted: #475569;     /* slate-600 */
+  --line: #e5e7eb;      /* gray-200 */
+  --accent: #2563eb;    /* blue-600 */
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.08);
+
+  --space-1: .5rem;
+  --space-2: .75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+}
+
+/* reseta margin/padding e usa border-box */
+.cv-page * { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* CORREÇÃO: o body tem a classe .cv-page (não é .cv-page body) */
+body.cv-page {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ========= layout ========= */
+.cv-page .container {
+  max-width: 820px;
+  margin: var(--space-6) auto;
+  padding: 1rem;
+  background: #f0f0f0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 2px dashed #333;
+}
+
+/* ========= header ========= */
+.cv-page header {
+  text-align: center;
+  margin-bottom: var(--space-5);
+}
+
+.cv-page header h1 {
+  font-size: clamp(1.9rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: var(--text);
+  margin-bottom: .25rem;
+}
+
+.cv-page header p {
+  margin-top: .25rem;
+  font-size: clamp(.97rem, 1.8vw, 1.05rem);
+  color: var(--muted);
+}
+
+.cv-page a {
+  color: var(--accent);
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.cv-page a:hover { text-decoration: underline; }
+
+/* ========= seções ========= */
+.cv-page section { margin-bottom: var(--space-5); }
+
+.cv-page section h2 {
+  font-size: clamp(1.00rem, 2.2vw, 1.15rem);
+  font-weight: 700;
+  color: var(--text);
+  padding-bottom: .4rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: var(--space-3);
+  letter-spacing: .2px;
+}
+
+/* parágrafos legíveis (sem justificar) */
+.cv-page section p {
+  color: var(--muted);
+  font-size: 1rem;
+  text-align: left;
+  max-width: 75ch;
+}
+
+/* ========= listas ========= */
+.cv-page ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.cv-page ul li {
+  margin-bottom: .6rem;
+  color: var(--text);
+}
+
+.cv-page ul li strong { font-weight: 700; }
+
+/* ========= jobs ========= */
+.cv-page .job { margin-bottom: var(--space-4); }
+
+.cv-page .job h3 {
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: .35rem;
+}
+
+.cv-page .job p {
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* ========= tabs ========= */
+.cv-page .tabs {
+  display: flex;
+  gap: .5rem;
+  margin: var(--space-3) auto;
+  justify-content: center;
+}
+
+.cv-page .tab-button {
+  padding: .45rem .9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  cursor: pointer;
+  font: inherit;
+}
+
+.cv-page .tab-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ========= print ========= */
+@media print {
+  body.cv-page {
+    background: #fff;
+    color: #000;
+    line-height: 1.6;
+  }
+  .cv-page .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0.5in;
+    box-shadow: none;
+    border: none;
+  }
+  .cv-page a { color: #000; text-decoration: none; }
+  .cv-page section { page-break-inside: avoid; }
+  .cv-page h1, .cv-page h2, .cv-page h3 { break-inside: avoid; }
+}
