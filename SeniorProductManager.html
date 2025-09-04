@@ -6,9 +6,31 @@
   <meta name="keywords" content="Product Manager Sênior, Growth, Saúde Digital, Prescrição, GA4, BigQuery, Salesforce Marketing Cloud, HubSpot, A/B testing, Cohort Analysis, CAC, LTV, Churn, PLG">
   <title>Currículo de Peter Mac Hamilton</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .tab-button {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+    #cv.v2 {
+      font-family: 'Times New Roman', serif;
+    }
+    #cv.v3 {
+      font-size: 0.9rem;
+    }
+    #cv.v4 {
+      background-color: #f0f0f0;
+      border: 2px dashed #333;
+      padding: 1rem;
+    }
+  </style>
 </head>
 <body class="cv-page">
-  <div class="container">
+  <div id="cv" class="container v1">
     <!-- Dados Pessoais -->
     <header>
       <h1>Peter Mac Hamilton</h1>
@@ -105,5 +127,20 @@
       <p><strong>Espanhol:</strong> Intermediário</p>
     </section>
   </div>
-</body>
-</html>
+  <nav class="tabs">
+    <button class="tab-button" data-target="v1">Moderna</button>
+    <button class="tab-button" data-target="v2">Clássica</button>
+    <button class="tab-button" data-target="v3">Compacta</button>
+    <button class="tab-button" data-target="v4">Criativa</button>
+  </nav>
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const cv = document.getElementById('cv');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        cv.className = 'container ' + btn.dataset.target;
+      });
+    });
+  </script>
+  </body>
+  </html>
