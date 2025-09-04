@@ -111,3 +111,35 @@
         break-inside: avoid;
     }
 }
+
+/* Tab navigation styles */
+.cv-page .tab-nav ul {
+    display: flex;
+    list-style: none;
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+
+.cv-page .tab-nav li {
+    margin-right: 10px;
+}
+
+.cv-page .tab-nav a {
+    display: block;
+    padding: 8px 12px;
+    background-color: #eee;
+    border-radius: 4px;
+}
+
+.cv-page .tab-nav a.active {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.cv-page .tab-section {
+    display: none;
+}
+
+.cv-page .tab-section.active {
+    display: block;
+}

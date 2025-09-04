@@ -144,3 +144,54 @@
   </script>
   </body>
   </html>
+=======
+<html lang="pt-BR" class="cv-page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Product Manager - Versões</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="tab-nav">
+            <ul>
+                <li><a href="#modern" class="active">Moderna</a></li>
+                <li><a href="#classic">Clássica</a></li>
+                <li><a href="#minimal">Minimalista</a></li>
+                <li><a href="#creative">Criativa</a></li>
+            </ul>
+        </nav>
+        <section id="modern" class="tab-section active">
+            <h2>Versão Moderna</h2>
+            <p>Conteúdo da versão moderna do currículo.</p>
+        </section>
+        <section id="classic" class="tab-section">
+            <h2>Versão Clássica</h2>
+            <p>Conteúdo da versão clássica do currículo.</p>
+        </section>
+        <section id="minimal" class="tab-section">
+            <h2>Versão Minimalista</h2>
+            <p>Conteúdo da versão minimalista do currículo.</p>
+        </section>
+        <section id="creative" class="tab-section">
+            <h2>Versão Criativa</h2>
+            <p>Conteúdo da versão criativa do currículo.</p>
+        </section>
+    </div>
+    <script>
+        const tabs = document.querySelectorAll('.tab-nav a');
+        const sections = document.querySelectorAll('.tab-section');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', event => {
+                event.preventDefault();
+                const target = tab.getAttribute('href').substring(1);
+                sections.forEach(sec => sec.classList.remove('active'));
+                document.getElementById(target).classList.add('active');
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
