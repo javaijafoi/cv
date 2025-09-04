@@ -74,7 +74,7 @@ body.cv-page {
 .cv-page section { margin-bottom: var(--space-5); }
 
 .cv-page section h2 {
-  font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+  font-size: clamp(1.00rem, 2.2vw, 1.15rem);
   font-weight: 700;
   color: var(--text);
   padding-bottom: .4rem;
