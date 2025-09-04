@@ -6,7 +6,7 @@
   <!-- keywords mais amplas e sem nicho -->
   <meta name="keywords" content="Product Manager Sênior, Produtos Digitais, Estratégia, Discovery, Entrega, Experimentos, A/B Testing, Métricas de Produto, OKRs, UX, Dados">
   <title>Currículo de Peter Mac Hamilton</title>
-  <link rel="stylesheet" href="style.css">
+  <link id="style-link" rel="stylesheet" href="style.css">
   <style>
     .tabs {
       display: flex;
@@ -17,21 +17,10 @@
       padding: 0.5rem 1rem;
       cursor: pointer;
     }
-    #cv.v2 {
-      font-family: 'Times New Roman', serif;
-    }
-    #cv.v3 {
-      font-size: 0.9rem;
-    }
-    #cv.v4 {
-      background-color: #f0f0f0;
-      border: 2px dashed #333;
-      padding: 1rem;
-    }
   </style>
 </head>
 <body class="cv-page">
-  <div id="cv" class="container v1">
+  <div id="cv" class="container">
     <!-- Dados Pessoais -->
     <header>
       <h1>Peter Mac Hamilton</h1>
@@ -132,19 +121,23 @@
   </div>
 
   <nav class="tabs">
-    <button class="tab-button" data-target="v1">Moderna</button>
-    <button class="tab-button" data-target="v2">Clássica</button>
-    <button class="tab-button" data-target="v3">Compacta</button>
-    <button class="tab-button" data-target="v4">Criativa</button>
+    <button class="tab-button" data-style="1">Moderna</button>
+    <button class="tab-button" data-style="2">Clássica</button>
+    <button class="tab-button" data-style="3">Compacta</button>
+    <button class="tab-button" data-style="4">Criativa</button>
   </nav>
 
   <script>
-    const buttons = document.querySelectorAll('.tab-button');
-    const cv = document.getElementById('cv');
-    buttons.forEach(btn => {
+    const styleLink = document.getElementById('style-link');
+    document.querySelectorAll('.tab-button').forEach(btn => {
       btn.addEventListener('click', () => {
-        cv.className = 'container ' + btn.dataset.target;
+        styleLink.href = `style_${btn.dataset.style}.css`;
       });
+    });
+    document.addEventListener('keydown', e => {
+      if (['1', '2', '3', '4'].includes(e.key)) {
+        styleLink.href = `style_${e.key}.css`;
+      }
     });
   </script>
 </body>
