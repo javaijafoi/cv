@@ -1,0 +1,145 @@
+.cv-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cv-page body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.cv-page .container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cv-page header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cv-page header h1 {
+    font-size: 2em;
+    color: #2c3e50;
+}
+
+.cv-page header p {
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+.cv-page a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.cv-page a:hover {
+    text-decoration: underline;
+}
+
+.cv-page section {
+    margin-bottom: 20px;
+}
+
+.cv-page section p {
+    text-align: justify;
+}
+
+.cv-page section h2 {
+    font-size: 1.5em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.cv-page .job h3 {
+    font-size: 1.2em;
+    color: #2980b9;
+}
+
+.cv-page .job p {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+.cv-page ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.cv-page ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilos específicos para impressão */
+@media print {
+    .cv-page body {
+        background-color: white;
+        color: black;
+    }
+
+    .cv-page .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .cv-page a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .cv-page header {
+        text-align: left;
+    }
+
+    .cv-page section {
+        page-break-inside: avoid;
+    }
+
+    .cv-page h1, .cv-page h2, .cv-page h3 {
+        break-inside: avoid;
+    }
+}
+
+/* Tab navigation styles */
+.cv-page .tab-nav ul {
+    display: flex;
+    list-style: none;
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+
+.cv-page .tab-nav li {
+    margin-right: 10px;
+}
+
+.cv-page .tab-nav a {
+    display: block;
+    padding: 8px 12px;
+    background-color: #eee;
+    border-radius: 4px;
+}
+
+.cv-page .tab-nav a.active {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.cv-page .tab-section {
+    display: none;
+}
+
+.cv-page .tab-section.active {
+    display: block;
+}
