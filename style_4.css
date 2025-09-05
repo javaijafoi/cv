@@ -2,12 +2,12 @@
 /* ========= base & tokens ========= */
 :root {
   --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  --bg: #f7f7f8;
+  --bg: #F1FAEE;
   --card: #ffffff;
-  --text: #0f172a;      /* slate-900 */
-  --muted: #475569;     /* slate-600 */
+  --text: #1D3557;      /* navy */
+  --muted: #555;        /* muted */
   --line: #e5e7eb;      /* gray-200 */
-  --accent: #2563eb;    /* blue-600 */
+  --accent: #E63946;    /* red */
   --radius: 14px;
   --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.08);
 
@@ -37,10 +37,27 @@ body.cv-page {
   max-width: 820px;
   margin: var(--space-6) auto;
   padding: 1rem;
-  background: #f0f0f0;
+  background: var(--card);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  border: 2px dashed #333;
+  border: 2px dashed var(--accent);
+  position: relative;
+}
+
+.lang-switch {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.9rem;
+}
+.lang-switch a {
+  color: var(--accent);
+  margin-left: 0.5rem;
+  text-decoration: none;
+}
+.lang-switch a.current {
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 /* ========= header ========= */
@@ -53,7 +70,7 @@ body.cv-page {
   font-size: clamp(1.9rem, 3.5vw, 2.4rem);
   font-weight: 800;
   letter-spacing: 0.2px;
-  color: var(--text);
+  color: var(--accent);
   margin-bottom: .25rem;
 }
 
@@ -72,14 +89,18 @@ body.cv-page {
 .cv-page a:hover { text-decoration: underline; }
 
 /* ========= seções ========= */
-.cv-page section { margin-bottom: var(--space-5); }
+.cv-page section {
+  margin-bottom: var(--space-5);
+  padding-left: 1rem;
+  border-left: 4px solid var(--accent);
+}
 
 .cv-page section h2 {
   font-size: clamp(1.00rem, 2.2vw, 1.15rem);
   font-weight: 700;
-  color: var(--text);
+  color: var(--accent);
   padding-bottom: .4rem;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--accent);
   margin-bottom: var(--space-3);
   letter-spacing: .2px;
 }
@@ -130,16 +151,17 @@ body.cv-page {
 
 .cv-page .tab-button {
   padding: .45rem .9rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--accent);
   border-radius: 999px;
   background: #fff;
+  color: var(--accent);
   cursor: pointer;
   font: inherit;
 }
 
 .cv-page .tab-button:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  background: var(--accent);
+  color: #fff;
 }
 
 /* ========= print ========= */
