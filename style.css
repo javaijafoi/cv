@@ -1,145 +1,142 @@
-.cv-page * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --primary: #1D3557;
+  --accent: #457B9D;
+  --bg: #F1FAEE;
+  --card: #ffffff;
+  --muted: #555;
 }
 
-.cv-page body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.cv-page {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--primary);
+  line-height: 1.6;
 }
 
 .cv-page .container {
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--card);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  position: relative;
 }
 
-.cv-page header {
-    text-align: center;
-    margin-bottom: 20px;
+.lang-switch {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.9rem;
+}
+.lang-switch a {
+  color: var(--accent);
+  margin-left: 0.5rem;
+  text-decoration: none;
+}
+.lang-switch a.current {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
-.cv-page header h1 {
-    font-size: 2em;
-    color: #2c3e50;
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+header h1 {
+  color: var(--accent);
+  font-size: 2.2rem;
+}
+header p {
+  margin-top: 0.5rem;
 }
 
-.cv-page header p {
-    margin-top: 5px;
-    font-size: 1em;
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
-.cv-page a {
-    color: #3498db;
-    text-decoration: none;
+.arrow {
+  color: var(--accent);
 }
 
-.cv-page a:hover {
-    text-decoration: underline;
+section {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--accent);
+}
+section h2 {
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+section p {
+  text-align: justify;
 }
 
-.cv-page section {
-    margin-bottom: 20px;
+.job h3 {
+  font-size: 1rem;
+  color: var(--primary);
+}
+.job p {
+  font-style: italic;
+  color: var(--muted);
 }
 
-.cv-page section p {
-    text-align: justify;
+ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+ul li {
+  margin-bottom: 0.5rem;
 }
 
-.cv-page section h2 {
-    font-size: 1.5em;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    color: #2c3e50;
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.tab-button {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  background: var(--card);
+  color: var(--accent);
+  cursor: pointer;
+  font: inherit;
+}
+.tab-button:hover {
+  background: var(--accent);
+  color: var(--card);
 }
 
-.cv-page .job h3 {
-    font-size: 1.2em;
-    color: #2980b9;
-}
-
-.cv-page .job p {
-    font-style: italic;
-    color: #7f8c8d;
-}
-
-.cv-page ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.cv-page ul li {
-    margin-bottom: 10px;
-}
-
-/* Estilos específicos para impressão */
 @media print {
-    .cv-page body {
-        background-color: white;
-        color: black;
-    }
-
-    .cv-page .container {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        border: none;
-        box-shadow: none;
-    }
-
-    .cv-page a {
-        color: black;
-        text-decoration: none;
-    }
-
-    .cv-page header {
-        text-align: left;
-    }
-
-    .cv-page section {
-        page-break-inside: avoid;
-    }
-
-    .cv-page h1, .cv-page h2, .cv-page h3 {
-        break-inside: avoid;
-    }
-}
-
-/* Tab navigation styles */
-.cv-page .tab-nav ul {
-    display: flex;
-    list-style: none;
-    margin-bottom: 20px;
+  body.cv-page {
+    background: #fff;
+    color: #000;
+  }
+  .cv-page .container {
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  section {
+    border-left: none;
     padding-left: 0;
-}
-
-.cv-page .tab-nav li {
-    margin-right: 10px;
-}
-
-.cv-page .tab-nav a {
-    display: block;
-    padding: 8px 12px;
-    background-color: #eee;
-    border-radius: 4px;
-}
-
-.cv-page .tab-nav a.active {
-    background-color: #3498db;
-    color: #fff;
-}
-
-.cv-page .tab-section {
-    display: none;
-}
-
-.cv-page .tab-section.active {
-    display: block;
+  }
 }
