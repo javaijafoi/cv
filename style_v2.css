@@ -1,0 +1,69 @@
+:root {
+  --bg: #ffffff;
+  --accent: #2e9cca;
+  --text: #222;
+  --sidebar-bg: #f4f4f4;
+}
+body.cv2 {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+}
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 260px;
+  background: var(--sidebar-bg);
+  padding: 2rem 1rem;
+}
+.sidebar h1 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+.sidebar h2 {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+.sidebar a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+.sidebar ul li {
+  margin-bottom: 0.5rem;
+}
+.content {
+  flex: 1;
+  padding: 2rem 3rem;
+}
+.content section {
+  margin-bottom: 2rem;
+}
+.content h2 {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.25rem;
+  margin-bottom: 1rem;
+}
+.job {
+  margin-bottom: 1.5rem;
+}
+.job h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+.job .meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+ul {
+  padding-left: 1.25rem;
+}
