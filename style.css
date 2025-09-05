@@ -1,6 +1,6 @@
 :root {
   --primary: #1D3557;
-  --accent: #E63946;
+  --accent: #457B9D;
   --bg: #F1FAEE;
   --card: #ffffff;
   --muted: #555;
@@ -65,43 +65,6 @@ a:hover {
   text-decoration: underline;
 }
 
-section {
-  margin-bottom: 1.5rem;
-  padding-left: 1rem;
-  border-left: 4px solid var(--accent);
-}
-section h2 {
-  font-size: 1.4rem;
-  color: var(--accent);
-  margin-bottom: 0.5rem;
-}
-section p {
-  text-align: justify;
-}
-
-.job h3 {
-  font-size: 1.2rem;
-  color: var(--primary);
-}
-.job p {
-  font-style: italic;
-  color: var(--muted);
-}
-
-ul {
-  list-style: disc;
-  margin-left: 1.5rem;
-}
-ul li {
-  margin-bottom: 0.5rem;
-}
-
-.tabs {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-  margin: 1rem 0;
-}
 .tab-button {
   padding: 0.4rem 0.8rem;
   border: 1px solid var(--accent);
