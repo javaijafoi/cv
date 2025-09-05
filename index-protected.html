@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Índice Protegido</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #links { display: none; }
+    #error { color: red; }
+  </style>
+</head>
+<body class="cv-page">
+  <div class="container">
+    <h1>Índice Protegido</h1>
+    <p>Insira a senha para acessar os arquivos:</p>
+    <input type="password" id="password" placeholder="Senha">
+    <button onclick="checkPassword()">Entrar</button>
+    <p id="error"></p>
+    <ul id="links">
+      <li><a href="index.html">index.html</a></li>
+      <li><a href="index-br.html">index-br.html</a></li>
+      <li><a href="index-custom.html">index-custom.html</a></li>
+      <li><a href="index-custom-gpm.html">index-custom-gpm.html</a></li>
+      <li><a href="PeterMacHamilton.html">PeterMacHamilton.html</a></li>
+      <li><a href="SeniorProductManager.html">SeniorProductManager.html</a></li>
+      <li><a href="SeniorProductManager-en.html">SeniorProductManager-en.html</a></li>
+      <li><a href="SeniorProductManager-es.html">SeniorProductManager-es.html</a></li>
+    </ul>
+  </div>
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+      if (input === '1917') {
+        document.getElementById('links').style.display = 'block';
+        document.getElementById('error').textContent = '';
+      } else {
+        document.getElementById('error').textContent = 'Senha incorreta';
+      }
+    }
+  </script>
+</body>
+</html>
